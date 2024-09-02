@@ -1,8 +1,6 @@
-import sys
-input = sys.stdin.readline
+a, b, c, d = map(int,input().split())
 
-a, b, c, d = map(int, input().split())
+def sup(a, b):
+    return a//b + int(bool(a % b))
 
-x = (b-1)//(d+1)
-y = (a-1)//(c+1)
-print((x+1)*(y+1))
+print(sup(a, c+1) * sup(b, d+1))
